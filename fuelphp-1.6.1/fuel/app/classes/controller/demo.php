@@ -1,6 +1,7 @@
 <?php
 
-class Controller_Demo extends Controller{
+class Controller_Demo extends Controller
+{
     
     function action_index()
     {
@@ -15,6 +16,9 @@ class Controller_Demo extends Controller{
     
     function action_select($id = null)
     {
+       
+        
+        
         $list = array(
             1 => '1st',
             2 => '2st',
@@ -25,13 +29,7 @@ class Controller_Demo extends Controller{
         else if($id > 3) $id = 3;
         
         $data = array('text' => $list[$id]);
-        return Response::forge(View::forge('demo/select',$data));
-        
-        
-       
-        
+        return Response::forge(View::forge('demo/select',$data));     
     }
 }
-
-
 ?>
